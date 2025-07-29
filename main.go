@@ -15,7 +15,7 @@ func main() {
 	http.HandleFunc("/ws", wsServer.HandleConnections)
 
 	// Serve static files for your client (assuming 'client' folder at project root)
-	http.Handle("/", http.FileServer(http.Dir("./static")))
+	http.Handle("/", http.FileServer(http.Dir("./client")))
 
 	port := ":8080"
 	log.Printf("WebSocket server listening on %s\n", port)
